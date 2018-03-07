@@ -1,0 +1,285 @@
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+  /*  font-family: 'Proxima Nova'; /*, Georgia, sans-serif*/
+}
+
+#navbar {
+	display: flex;
+	width: 100%;
+	height: 64px;
+	background: #99B898;
+	position: fixed;
+	flex-direction: row;
+	align-items: center;
+	z-index: 1;
+}
+
+#navbar-items {
+	display:flex;
+	position: relative;
+	left: 520px;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	float: right;
+	z-index: 1;
+	line-height: 40px;
+	color: #2A363B;
+	font-family: 'Proxima Nova';
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 64px;
+}
+
+.item:hover {
+	color: #FECEA8;
+	cursor: pointer;
+}
+
+.item:active {
+	opacity: 0.5;
+	transform: scale(0.9);
+}
+
+#search-bar {
+	width: 320px;
+	height: 40px;
+	border-radius: 10px;
+	background: #FFFFFF;
+	opacity: 0.62;
+	position: absolute;
+	left: 120px;
+	display: flex;
+	bottom: 12px;
+	align-items: center;
+}
+
+#search-bar:hover {
+	cursor: text;
+}
+
+.pic {
+	margin-top: 8px;
+	margin-left: 8px;
+	z-index: 1;
+}
+
+.pic:hover {
+	cursor: pointer;
+}
+
+#logo {
+	margin: 8px 8px 8px 40px;
+	position: relative;
+    border: 2px solid #2A363B;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo:hover {
+	border: 2px solid #FECEA8;
+	cursor: pointer;
+}
+
+#logo:active {
+	opacity: 0.5;
+	transform: scale(0.9);
+}
+
+#logo-text {
+	padding: 10px;
+	color: #2A363B;
+	font-family: 'Proxima Nova';
+	font-weight: bold;
+	font-size: 24px;
+}
+
+#logo-text:hover {
+	color: #FECEA8;
+	cursor: pointer;
+}
+
+
+#content {
+	background: #2A363B;
+	padding-top: 64px;
+	display: grid;
+	grid-template-columns: 1/4 1/4 1/4 1/4;
+	grid-template-rows: 1/18 1/18 15/18 1/18;
+	grid-template-areas: 
+		"r r r r"
+		"h h h h"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"e e e e"
+		"m m m m";
+}
+
+#num-results {
+	grid-area: r;
+	margin-left: 80px;
+	margin-top: 50px;
+	color: #C4C4C4;
+	opacity: 0.5;
+}
+
+#content-headers {
+	grid-area: h;
+	display: flex;
+	flex-direction: row;
+	color: #DBDBDB;
+	font-weight: bold;
+	font-family: 'Proxima Nova';
+	/*margin-left: 120px;*/
+	margin-top: 50px;
+	margin-bottom: 32px;
+	padding: 20px;
+	border-bottom: 1px solid grey;
+}
+
+.header {
+	margin-right: 180px;
+	margin-left: 120px;
+
+}
+
+
+.content-entries {
+	grid-area: e;
+	display: grid;
+	grid-template-columns: 25% 25% 50%;
+	grid-template-rows: repeat(5, 20%);
+	grid-template-areas: 
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l"
+		"a t l l";
+	color: #BCBCBC;
+	/*margin-left: 12px;*/
+}
+
+#col-1 {
+	grid-area: a;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	
+}
+
+.album {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	margin-left: 120px;
+	margin-bottom: 8px;
+}
+
+.artist {
+	margin-left: 120px;
+	margin-bottom: 80px;
+	font-family: 'Proxima Nova';
+}
+
+.artist:hover {
+	color: #FECEA8;
+	cursor: pointer;
+}
+
+#col-2 {
+	grid-area: t;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.title {
+	margin-bottom: 285px;
+	margin-left: 123px;
+	font-family: 'Proxima Nova';
+	font-weight: bolder;
+}
+
+.title:hover {
+	color: #FECEA8!important;
+	cursor: pointer;
+}
+
+
+#col-3 {
+	grid-area: l;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+.lyrics {
+	margin-bottom: 53px;
+	margin-left: 114px;
+
+}
+
+.text {
+	margin-bottom: 24px;
+	font-family: 'Proxima Nova';
+}
+
+#see-more {
+	grid-area: m;
+	display: flex;
+	flex-direction: row;
+	color: #DBDBDB;
+	justify-content: center;
+}
+
+.page {
+	margin: 8px;
+	font-size: 18px;
+	font-family: 'Proxima Nova';
+}
+
+.page:hover {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #FECEA8;
+	font-weight: bold;
+
+}
+
+.page:active {
+	opacity: 1;
+}
+
+
